@@ -1,0 +1,33 @@
+input[type=file]::file-selector-button {
+  border: none;
+    padding: .2em .4em;
+    border-radius: 10px;
+    background-color: #f15d44;
+    color: white;
+    cursor: pointer;
+    height: 55px;
+    width: 120px;
+
+  }
+  
+.submit__btm__predict
+{
+  border: none;
+    padding: .2em .4em;
+    border-radius: 10px;
+    background-color: #f15d44;
+
+    color: white;
+    cursor: pointer;
+    height: 55px;
+    width: 120px;
+
+}
+
+body
+{
+  background-image: url("/static/img/background.jpeg");
+  background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}

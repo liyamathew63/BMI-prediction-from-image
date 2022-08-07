@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BMI Calculation</title>
+        <link rel="shortcut icon" href="https://img.icons8.com/ios-filled/344/oil-massage.png" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/lib/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/lib/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/lib/owl.carousel.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/lib/slicknav.min.css') }}">
+
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/magnific-popup.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/main.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/authPageStyle.css') }}">
+
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+
+
+
+
+
+
+    <script src="{{ url_for('static',filename='js/lib/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/lib/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/lib/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/lib/jquery.slicknav.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/lib/masonry.pkgd.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/lib/mixitup.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/lib/owl.carousel.min.js') }}"></script>
+
+    <script src="{{ url_for('static',filename='js/main.js') }}"></script>
+
+</body>
+</html>

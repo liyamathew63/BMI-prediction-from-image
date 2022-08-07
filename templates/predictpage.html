@@ -1,0 +1,48 @@
+{% extends "baseinside.html" %} {% block content %}
+
+<div class="predictPage__div">
+    <div class="predict__container">
+        <h2 class="predict__bmititle">BMI Calculation</h2>
+
+        <div>
+           <form action="/predict" method="post" enctype="multipart/form-data">
+   
+               <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg" value="Select the image">
+   
+   
+               <input type="submit" value="Predict" class="submit__btm__predict">
+           </form>
+       </div> 
+
+    </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}
+
+{% block footerSection %}
+<div class="footer-section fixedInBottom">
+    <div class="container">
+         <div class="copyright-text">
+            <ul>
+                <li><a href="#">Term & Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p>&copy;<p>
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </p>
+           
+        </div>
+    </div>
+</div>
+
+{% endblock %}

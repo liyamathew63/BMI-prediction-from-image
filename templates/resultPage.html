@@ -1,0 +1,51 @@
+{% extends "baseinside.html" %} {% block content %}
+<div class="predictPage__div">
+    <div class="predict__container">
+        <h2 class="predict__bmititle">BMI Calculation Result</h2>
+
+        <div>
+            <h3><b>BMI Value: </b>{{bmi_pred}}</h3>
+            <h3><b>BMI Status: </b>{{bmi_result}}</h3>
+            
+            {% if bmi_status==0 %}
+                <h4 class="result__text"><a href="{{ url_for('underweightPage') }}">Click Here</a> to know diet plans for underweight</h4>
+            {% endif %}
+            {% if bmi_status==1 %}
+                <h4 class="result__text">Keep it up!!!!! Your BMI is normal.</h4>
+            {% endif %}
+            {% if bmi_status==2 %}
+                <h4 class="result__text"> <a href="{{ url_for('overweightPage') }}">Click Here</a>  to know diet plans for overweight</h4>
+            {% endif %}
+
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
+{% endblock %}
+
+{% block footerSection %}
+<div class="footer-section fixedInBottom">
+    <div class="container">
+         <div class="copyright-text">
+            <ul>
+                <li><a href="#">Term & Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p>&copy;<p>
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </p>
+            
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

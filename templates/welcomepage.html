@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header class="header-section">
+    <div class="container">
+        <div class="logo">
+            <a href="{{ url_for('welcomePage') }}">
+                <h3 class="logo__title">Fityou</h3>
+            </a>
+        </div>
+        <div class="nav-menu">
+            <nav class="mainmenu mobile-menu">
+                <ul class="indsection">
+
+                    {% if current_user.is_authenticated %}
+                        <li>
+                            <a href="{{ url_for('predictBMI') }}" class="">Predict BMI</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('logout') }}" class="">Logout</a>
+                        </li>
+                    {% else %}
+                        <li>
+                            <a href="{{ url_for('loginPage') }}">Login</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+
+            {% if current_user.is_authenticated %}
+
+            {% else %}
+                <a href="{{ url_for('registerPage') }}" class="primary-btn signup-btn">Sign Up Today</a>
+            {% endif %}
+            
+        </div>
+        <div id="mobile-menu-wrap"></div>
+    </div>
+</header>
+
+    <div class="hero-section set-background">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="hero-text">
+                        <span>AI FITNESS GUIDE</span>
+                        <h1>BMI CALCULATOR AND HEALTH GUIDE</h1>
+                        <p>As a healthy life is one's goal, grabbing an accurate health plan is essential. Fityou comes packed with user friendly                                                  AI based BMI calculator that lets you monitor your health at your own pace. 
+                            What is the ideal weight for my height? The AI based Body Mass Index calculator by Fityou answers this question in                                               a second! People often ask this question out of curiosity, but BMI can also be used for health purposes: it helps                                             diagnose and avoid serious risks like diabetes or heart issues.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
